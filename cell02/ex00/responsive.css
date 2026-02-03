@@ -1,0 +1,18 @@
+table {
+  width: 100%;
+  height: 100vh;
+  border-collapse: collapse;
+}
+
+td {
+  border: 1px solid black;
+  text-align: center;
+}
+
+.naruto {
+  background-color: #F7E37C;
+}
+
+.sasuke {
+  background-color: #CDB4DB;
+}
