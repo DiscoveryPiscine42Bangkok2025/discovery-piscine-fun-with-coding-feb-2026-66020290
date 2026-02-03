@@ -1,1 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>table</title>
+
+  <link rel="stylesheet" href="responsive.css">
+</head>
+<body>
+
+<table>
+  <tr>
+    <td class="naruto">naruto</td>
+    <td class="sasuke">sasuke</td>
+  </tr>
+</table>
+
+</body>
+</html>
 
