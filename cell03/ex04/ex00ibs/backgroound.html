@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Change background</title>
+    <link rel="stylesheet" href="background.css">
+
+    <!-- ใส่ jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+
+    <button id="btn">Click me!</button>
+
+    <script>
+        $(document).ready(function () {
+            $("#btn").click(function () {
+                var r = Math.floor(Math.random() * 256);
+                var g = Math.floor(Math.random() * 256);
+                var b = Math.floor(Math.random() * 256);
+
+                $("body").css(
+                    "background-color",
+                    "rgb(" + r + "," + g + "," + b + ")"
+                );
+            });
+        });
+    </script>
+
+</body>
+</html>
