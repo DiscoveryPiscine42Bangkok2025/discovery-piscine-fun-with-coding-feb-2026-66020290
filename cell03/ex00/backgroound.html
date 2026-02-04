@@ -1,1 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Change background</title>
+<link rel="stylesheet" href="background.css">
+</head>
+<body>
+
+    <button onclick="changeBg()">Click me!</button>
+
+    <script>
+        function changeBg() {
+            var r = Math.floor(Math.random() * 256);
+            var g = Math.floor(Math.random() * 256);
+            var b = Math.floor(Math.random() * 256);
+
+            document.body.style.backgroundColor =
+                "rgb(" + r + "," + g + "," + b + ")";
+        }
+    </script>
+
+</body>
+</html>
 
