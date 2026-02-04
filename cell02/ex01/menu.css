@@ -1,0 +1,38 @@
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.menu > ul {
+  display: flex;
+  background: #9b4948;
+}
+
+.menu > ul > li {
+  position: relative;
+  padding: 15px 20px;
+  color: white;
+  cursor: pointer;
+}
+
+/* dropdown */
+.dropdown {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  color: #000;
+  min-width: 150px;
+}
+
+.dropdown li {
+  padding: 10px;
+}
+
+/* magic: hover */
+.menu > ul > li:hover .dropdown {
+  display: block;
+}
