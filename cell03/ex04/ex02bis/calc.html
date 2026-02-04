@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>It's over 9000</title>
+
+    <!-- import jQuery -->
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+</head>
+<body>
+
+    <input type="text" id="left">
+
+    <select id="op">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+    </select>
+
+    <input type="text" id="right">
+
+    <input type="submit" value="Try me!" id="btn">
+
+    <script>
+        function isValidNumber(n) {
+            return /^\d+$/.test(n);
+        }
+
+        $(document).ready(function () {
+
+            $("#btn").click(function () {
+                let left = $("#left").val();
+                let right = $("#right").val();
+                let op = $("#op").val();
+
+                if (!isValidNumber(left) || !isValidNumber(right)) {
+                    alert("Error :(");
+                    return;
+                }
+
+                let a = parseInt(left);
+                let b = parseInt(right);
+                let result;
+
+                if ((op === "/" || op === "%") && b === 0) {
+                    alert("It’s over 9000!");
+                    console.log("It’s over 9000!");
+                    return;
+                }
+
+                if (op === "+") result = a + b;
+                else if (op === "-") result = a - b;
+                else if (op === "*") result = a * b;
+                else if (op === "/") result = a / b;
+                else if (op === "%") result = a % b;
+
+                alert(result);
+                console.log(result);
+            });
+
+            setInterval(function () {
+                alert("Please, use me...");
+            }, 30000);
+
+        });
+    </script>
+
+</body>
+</html>
