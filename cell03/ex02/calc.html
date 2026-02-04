@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>It's over 9000</title>
+</head>
+<body>
+
+    <input type="text" id="left">
+    
+    <select id="op">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="*">*</option>
+        <option value="/">/</option>
+        <option value="%">%</option>
+    </select>
+
+    <input type="text" id="right">
+
+    <input type="submit" value="Try me!" onclick="calculate()">
+
+    <script>
+        function isValidNumber(n) {
+            return /^\d+$/.test(n);
+        }
+
+        function calculate() {
+            var left = document.getElementById("left").value;
+            var right = document.getElementById("right").value;
+            var op = document.getElementById("op").value;
+
+            if (!isValidNumber(left) || !isValidNumber(right)) {
+                alert("Error :(");
+                return;
+            }
+
+            var a = parseInt(left);
+            var b = parseInt(right);
+            var result;
+
+            if ((op === "/" || op === "%") && b === 0) {
+                alert("It’s over 9000!");
+                console.log("It’s over 9000!");
+                return;
+            }
+
+            if (op === "+") result = a + b;
+            else if (op === "-") result = a - b;
+            else if (op === "*") result = a * b;
+            else if (op === "/") result = a / b;
+            else if (op === "%") result = a % b;
+
+            alert(result);
+            console.log(result);
+        }
+
+        setInterval(function () {
+            alert("Please, use me...");
+        }, 30000);
+    </script>
+
+</body>
+</html>
